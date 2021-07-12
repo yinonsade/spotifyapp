@@ -70,7 +70,7 @@ $(document).ready(function () {
   //Pringing the table of results
   function dataTable(dataSet) {
     let newDataArray = [];
-    let resultsArray = dataSet.tracks.items; 
+    let resultsArray = dataSet.tracks.items;
 
     for (i = 0; i < resultsArray.length; i++) {
       let tempArray = [];
@@ -107,7 +107,7 @@ $(document).ready(function () {
       columns: [
         { title: "Song Name" },
         { title: "Artist Name" },
-        { title: "Release Year" },
+        { title: "Release Date" },
         { title: "Page Link" },
         { title: "Audio Sample" },
         { title: "Album Image" },
