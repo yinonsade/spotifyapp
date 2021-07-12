@@ -32,18 +32,23 @@ $(document).ready(function () {
 
   let userInput, userInputLimit;
 
-
   //Trigers the search on mouse clicked
   $(".search-button").on("click", function () {
     getNewResults();
+  });
+  
+  //triger the search on Enter pressed
+  $('input[name="user-input"]').on("keydown", function (event) {
+    if (event.which === 13) {
+      event.preventDefault();
+      getNewResults();
+    }
   });
 
   //Get Info from user input
   function getNewResults() {
     userInput = encodeURIComponent($('input[name="user-input"]').val());
-    if (userInputLimit == 0) {
-      userInputLimit = 10;
-    }
+    $('input[name="user-input"]').val("");
     ajaxRequest();
   }
 
@@ -82,7 +87,10 @@ $(document).ready(function () {
         '<audio controls> <source src="' +
         resultsArray[i].preview_url +
         '" type="audio/ogg">play</audio>';
-
+      if (resultsArray[i].preview_url == null) {
+        audioSample = "N/A";
+        console.log(audioSample);
+      }
       tempArray = [
         songName,
         artistName,
