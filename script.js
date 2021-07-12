@@ -32,12 +32,6 @@ $(document).ready(function () {
 
   let userInput, userInputLimit;
 
-  //Trigers the search on Enter pressed
-  $("input").on("keydown", function (event) {
-    if (event.which === 13) {
-      getNewResults();
-    }
-  });
 
   //Trigers the search on mouse clicked
   $(".search-button").on("click", function () {
