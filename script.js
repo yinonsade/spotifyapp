@@ -24,14 +24,14 @@ $( document ).ready(function() {
     let client_id = '1ab48fdbdb764caab41ac1a2c37d79db';
     // Use the following site to convert your regular url to the encoded version:
     // https://www.url-encode-decode.com/
-    let redirect_uri = 'https%3A%2F%2Fyinonsade.github.io%2FsotifyAPIJS'; // GitHub Pages URL or whatever your public url to this app is
+    let redirect_uri = 'https%3A%2F%2Fyinonsade.github.io%2Fspotifyapp'; // GitHub Pages URL or whatever your public url to this app is
     // *************** END *************************
 
     const redirect = `https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=token&redirect_uri=${redirect_uri}`;
     // Don't authorize if we have an access token already
-    // if(accessToken == null || accessToken == "" || accessToken == undefined){
-    //   window.location.replace(redirect);
-    // }
+    if(accessToken == null || accessToken == "" || accessToken == undefined){
+      window.location.replace(redirect);
+    }
 
 
     let userInput,
@@ -59,7 +59,6 @@ $( document ).ready(function() {
     }
     ajaxRequest();
   }
-  accessToken = 'BQBT2I6JzETC_ZCJDc9mKcXpPnl_ouiSClGMWdMSZe45_4td-wStd6gDmQEF1CSpy90djF9vvkGaXjhbkE8BZKaQv5DcTeGr-8xHZ6moLfk-GuVb_sGnPyGeBkP0wEN3pKWzXZ9vTWwy6ytEFttfcmtuw3B1Oyggj4o';
   //call the api
   function ajaxRequest() {
     $.ajax({
