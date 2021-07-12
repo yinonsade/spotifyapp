@@ -1,44 +1,92 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8" />
-        <title>Spotify Search</title>
-        <link rel="stylesheet" href="lib/dt.css">
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="shortcut icon" href="#" />
-    </head>
-    <body>
-        <div id="body-container">
-            <div id="search-container">
-                <input
-                    class="input"
-                    type="text"
-                    name="user-input"
-                    placeholder="Search Spotify..."
-                />
-                <input
-                class="input"
-                type="number"
-                min="0"
-                name="limit-input"
-                placeholder="Limit results"
-            />
-                <button class="search-button">search</button>
-            </div>
-            <div id="results-text"></div>
-            <div id="results-container">
+  <head>
+    <meta charset="utf-8" />
+    <title>Spotify Search</title>
+    <link
+      rel="stylesheet"
+      href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="#" />
+  </head>
 
-                <table id="example" class="display" width="100%"></table>
-                
-            </div>
-        </div>
+  <body>
+    <div id="body-container">
+      <div id="joking">
+        <a
+          id="jukeMaker"
+          href="#"
+          class="btn-flip"
+          data-back="LAUGH!"
+          data-front="MAKE ME"
+        ></a>
+        <img src="/giphy.gif" alt="" />
+        <h3 id="jocking-line">Here comes a funny one...</h3>
+      </div>
 
-        
-        <script src="https://apis.google.com/js/platform.js"></script>
-        <script src="lib/jquery.js"></script>
-        <script src="lib/dt.js"></script>
-        <script src="script.js"></script>
-    </body>
+      <div id="search-container">
+        <form action="">
+          <input
+            class="input"
+            type="text"
+            name="user-input"
+            placeholder="Search Spotify..."
+            type="search"
+          />
+          <i class="fa fa-search search-button"></i>
+        </form>
+      </div>
+      <div id="results-text"></div>
+      <div id="results-container">
+        <table id="customTable" class="display" width="100%"></table>
+      </div>
+    </div>
+
+    <!-- loader -->
+    <div id="wait" style="display: none">
+      <div
+        class="tenor-gif-embed"
+        data-postid="22000011"
+        data-share-method="host"
+        data-width="25%"
+        style="margin: auto"
+        data-aspect-ratio="0.748995983935743"
+      >
+        <a href="https://tenor.com/view/nowloading-yamada-gif-22000011"
+          >Nowloading Yamada GIF</a
+        >
+        from
+        <a href="https://tenor.com/search/nowloading-gifs">Nowloading GIFs</a>
+      </div>
+      <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+      ></script>
+    </div>
+    <!-- end loader -->
+    <!-- REMOVE -->
+    <script src="data.js"></script>
+    <!-- THIS -->
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
-
-

@@ -1,31 +1,13 @@
 
-
-a {
-    color: #1db954;
-    text-decoration: none;
+body{
+    font-family: cursive;
 }
-input {
-    margin: 10px;
+#customTable_wrapper{
+    background: #25E487;
+    opacity: 0.9;
 }
-input:focus {
-    border-color: #1db954;
-}
-
-select {
-    outline-color: #1db954;
-}
-
-select:active,
-select:hover {
-    outline-color: #1db954;
-}
-
-button {
-    background-color: white;
-    outline-color: #1db954;
-}
-
 #body-container {
+    margin-top: 1.25rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -34,50 +16,18 @@ button {
 
 #search-container {
     display: flex;
-    padding: 30px;
+    padding: 1.875rem;
 }
 
 #results-text {
     position: absolute;
-    top: 60px;
+    top: 3.75rem;
 }
 
 #results-container {
     position: absolute;
-    top: 100px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3), 0 1px 4px rgba(0, 0, 0, 0);
-}
-
-.one-of-twenty-container {
-    display: flex;
-    align-items: center;
-    width: 80vw;
-    padding: 20px;
-    height: 150px;
-}
-
-.one-of-twenty-container:nth-child(odd) {
-    background-color: black;
-}
-
-.one-of-twenty-container:nth-child(even) {
-    background-color: white;
-}
-
-.results-albums-artists img {
-    width: 100px;
-    height: 100px;
-    filter: grayscale(100%);
-}
-
-.results-name {
-    padding: 30px;
-}
-
-.more-button-container {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+    top: 6.25rem;
+    box-shadow: 0 .0625rem .375rem rgba(0, 0, 0, 0.3), 0 .0625rem .25rem rgba(0, 0, 0, 0);
 }
 
 video{
@@ -86,4 +36,142 @@ video{
 
 img{
     max-width: 12.5rem;
+}
+
+#search-container form{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+}
+
+#search-container input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 2px;
+}
+
+.fa{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+#search-container form:hover{
+    width: 200px;
+    cursor: pointer;
+}
+
+#search-container form:hover input{
+    display: block;
+}
+
+#search-container form:hover .fa{
+    background: #07051a;
+    color: white;
+}
+.tenor-gif-embed{
+    margin: auto !important;
+    border-radius: 10%;
+}
+#joking{
+display: flex;
+flex-direction: column;
+}
+
+#joking img{
+    margin: auto;
+}
+
+#jocking-line{
+    background: #fffcfc;
+    opacity: 0.8;
+    text-align: center;
+    padding: 10px;
+}
+
+#results-container {
+   top: 25rem !important;
+}
+
+#jukeMaker{
+    max-width: 12.5rem;
+    margin: auto;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.btn-flip {
+  opacity: 1;
+  outline: 0;
+  color: #fff;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+}
+.btn-flip:hover:after {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+.btn-flip:hover:before {
+  opacity: 0;
+  transform: translateY(50%) rotateX(90deg);
+}
+.btn-flip:after {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  color: #323237;
+  display: block;
+  transition: 0.5s;
+  position: absolute;
+  background: #adadaf;
+  content: attr(data-back);
+  transform: translateY(-50%) rotateX(90deg);
+}
+.btn-flip:before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: #adadaf;
+  display: block;
+  padding: 0 30px;
+  line-height: 40px;
+  transition: 0.5s;
+  position: relative;
+  background: #323237;
+  content: attr(data-front);
+  transform: translateY(0) rotateX(0);
 }
