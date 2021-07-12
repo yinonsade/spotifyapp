@@ -55,7 +55,6 @@ $(document).ready(function () {
 
   //Call the api from results
   function ajaxRequest() {
-    dataTable(tempData); //(REMOVE)
     $.ajax({
       url: `https://api.spotify.com/v1/search?q=${userInput}&type=track`,
       type: "GET",
@@ -71,7 +70,7 @@ $(document).ready(function () {
   //Pringing the table of results
   function dataTable(dataSet) {
     let newDataArray = [];
-    let resultsArray = dataSet.tracks.items;
+    let resultsArray = dataSet.tracks.items; 
 
     for (i = 0; i < resultsArray.length; i++) {
       let tempArray = [];
